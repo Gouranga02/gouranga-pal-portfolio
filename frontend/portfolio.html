@@ -443,12 +443,12 @@
   <nav class="navbar" id="navbar">
     <div class="logo"><span class="fn">gouranga</span><span class="dim">.pal(</span><span class="fn">)</span></div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Experience</a></li>
-      <li><a href="#">Skills</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
       <li><a href="#" class="active">Projects</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
       <li class="close-menu" id="closeNavBtn"><i class="fas fa-times"></i></li>
     </ul>
     <div style="display:flex; align-items:center;">
@@ -512,9 +512,9 @@
       <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
     </div>
     <div class="links">
-      <a href="#">About</a>
+      <a href="index.html">About</a>
       <a href="#">Projects</a>
-      <a href="#">Contact</a>
+      <a href="index.html#contact">Contact</a>
       <a href="#" download>Resume</a>
     </div>
     <div class="copy">© 2026 Gouranga Pal — <span class="teal">status: available_for_hire == true</span></div>
@@ -524,15 +524,116 @@
   <a href="#" class="back-top"><i class="fas fa-arrow-up"></i></a>
 
   <script>
-    // ----- PROJECT DATA -----
+    // ----- PROJECT DATA WITH IMAGE LINKS (ONLY IMAGES, NO <a> TAGS) -----
     const projects = [
-      { id: 1, title: 'InterVU', image: '/work-1.png', description: 'AI-powered video interview analyzer with emotion detection. LLM-integrated platform generating dynamic questions and real-time feedback.', technologies: ['Python','TensorFlow','OpenCV','React'], github: '#', liveDemo: '#', category: 'cv', featured: true, status: 'Production' },
-      { id: 2, title: 'CropCure', image: '/work-2.png', description: 'Deep learning for crop disease detection and remedy. Fine-tuned EfficientNetV2 on Paddy Doctor dataset.', technologies: ['PyTorch','FastAPI','React Native'], github: '#', liveDemo: '#', category: 'dl', featured: true, status: 'Production' },
-      { id: 3, title: 'NovaShield', image: '/work-3.png', description: 'Intelligent IoT-based security system with anomaly detection. Edge-AI on ESP32 monitoring heart rate, SpO2, and temperature.', technologies: ['Python','IoT','MongoDB','Flutter'], github: '#', liveDemo: '#', category: 'iot', featured: true, status: 'Production' },
-      { id: 4, title: 'Smart Agriculture', image: '/work4.jpg', description: 'ML-driven precision farming and yield prediction. Real-time IoT sensor pipeline across multiple field nodes.', technologies: ['Scikit-learn','Node.js','PostgreSQL'], github: '#', liveDemo: '#', category: 'ml', featured: false, status: 'Development' },
-      { id: 5, title: 'Kinoklub', image: '/work5.webp', description: 'Movie recommendation engine using collaborative filtering. Android app with Firebase integration.', technologies: ['Python','Pandas','Flask','React'], github: '#', liveDemo: '#', category: 'web', featured: false, status: 'Production' },
-      { id: 6, title: 'Medics', image: '/work6.webp', description: 'LLM-based medical assistant for symptom analysis. Cross-platform app with real-time sync.', technologies: ['LangChain','OpenAI','Streamlit'], github: '#', liveDemo: '#', category: 'llm', featured: false, status: 'Development' },
-      { id: 7, title: 'Portfolio Website', image: '/work7.webp', description: 'AI-themed portfolio with interactive 3D elements. Built with Three.js and GSAP for smooth animations.', technologies: ['HTML','CSS','Three.js','GSAP'], github: '#', liveDemo: '#', category: 'web', featured: false, status: 'Production' }
+      { 
+        id: 1, 
+        title: 'Disease Prediction API', 
+        image: 'https://i.ibb.co/xtwSD7mV/01-disease-prediction-api.png', 
+        description: 'ML-based disease prediction API using symptoms. End-to-end model deployment with Flask and Docker.', 
+        technologies: ['Python', 'Flask', 'Scikit-learn', 'Docker'], 
+        github: '#', 
+        liveDemo: '#', 
+        category: 'ml', 
+        featured: true, 
+        status: 'Production' 
+      },
+      { 
+        id: 2, 
+        title: 'Real-Time Sentiment Analysis', 
+        image: 'https://i.ibb.co/HfWCTQrK/02-real-time-sentiment-analysis.png', 
+        description: 'Real-time sentiment analysis on social media feeds. NLP model with Transformer architecture.', 
+        technologies: ['Python', 'NLP', 'Transformers', 'Streamlit'], 
+        github: '#', 
+        liveDemo: '#', 
+        category: 'nlp', 
+        featured: true, 
+        status: 'Production' 
+      },
+      { 
+        id: 3, 
+        title: 'Medics - Doctor Booking', 
+        image: 'https://i.ibb.co/Gv7NzF6D/03-medics-doctor-booking.png', 
+        description: 'AI-powered doctor booking platform with appointment scheduling and patient management.', 
+        technologies: ['Python', 'Django', 'PostgreSQL', 'React'], 
+        github: '#', 
+        liveDemo: '#', 
+        category: 'web', 
+        featured: true, 
+        status: 'Production' 
+      },
+      { 
+        id: 4, 
+        title: 'Kinoklub - Movie Recommendation', 
+        image: 'https://i.ibb.co/mrbqBy2S/04-kinoklub.png', 
+        description: 'Movie recommendation engine using collaborative filtering and content-based algorithms.', 
+        technologies: ['Python', 'Pandas', 'Flask', 'React'], 
+        github: '#', 
+        liveDemo: '#', 
+        category: 'ml', 
+        featured: false, 
+        status: 'Production' 
+      },
+      { 
+        id: 5, 
+        title: 'NovaShield - AI Patient Monitoring', 
+        image: 'https://i.ibb.co/gLVx3jhb/05-novashield.png', 
+        description: 'Edge-AI anomaly-detection on ESP32 monitoring heart rate, SpO2, and temperature in real-time.', 
+        technologies: ['ESP32', 'TensorFlow Lite', 'Firebase', 'Flutter'], 
+        github: '#', 
+        liveDemo: '#', 
+        category: 'iot', 
+        featured: true, 
+        status: 'Production' 
+      },
+      { 
+        id: 6, 
+        title: 'CropCure - Rice Disease Detection', 
+        image: 'https://i.ibb.co/GfbRMP5t/06-cropcure.png', 
+        description: 'Fine-tuned EfficientNetV2 on Paddy Doctor dataset for multi-class disease classification.', 
+        technologies: ['Python', 'TensorFlow', 'EfficientNetV2', 'FastAPI'], 
+        github: '#', 
+        liveDemo: '#', 
+        category: 'dl', 
+        featured: true, 
+        status: 'Production' 
+      },
+      { 
+        id: 7, 
+        title: 'InterVU - AI Mock Interview', 
+        image: 'https://i.ibb.co/7JbTSgkN/07-intervu-gosmi-ai.png', 
+        description: 'LLM-integrated platform generating dynamic questions and real-time feedback with emotion detection.', 
+        technologies: ['Python', 'TensorFlow', 'OpenCV', 'React'], 
+        github: '#', 
+        liveDemo: '#', 
+        category: 'cv', 
+        featured: true, 
+        status: 'Production' 
+      },
+      { 
+        id: 8, 
+        title: 'Personal Portfolio', 
+        image: 'https://i.ibb.co/SDDvL08h/08-personal-portfolio.png', 
+        description: 'AI-themed portfolio with interactive 3D elements and smooth animations.', 
+        technologies: ['HTML', 'CSS', 'Three.js', 'GSAP'], 
+        github: '#', 
+        liveDemo: '#', 
+        category: 'web', 
+        featured: false, 
+        status: 'Production' 
+      },
+      { 
+        id: 9, 
+        title: 'Attendance Tracking System', 
+        image: 'https://i.ibb.co/GQkBxK62/09-attendance-tracking.png', 
+        description: 'AI-based facial recognition attendance system with real-time tracking and reporting.', 
+        technologies: ['Python', 'OpenCV', 'Face Recognition', 'SQLite'], 
+        github: '#', 
+        liveDemo: '#', 
+        category: 'cv', 
+        featured: false, 
+        status: 'Development' 
+      }
     ];
 
     // ----- RENDER -----
@@ -573,7 +674,7 @@
       document.querySelectorAll('.hire-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
           e.stopPropagation();
-          alert('Redirect to Contact page / email');
+          window.location.href = 'index.html#contact';
         });
       });
     }
@@ -597,7 +698,7 @@
       if (e.target === e.currentTarget) document.getElementById('modalOverlay').classList.remove('open');
     });
     document.getElementById('modalHire').addEventListener('click', () => {
-      alert('Redirect to Contact page / email');
+      window.location.href = 'index.html#contact';
     });
 
     // ----- FILTERS -----
